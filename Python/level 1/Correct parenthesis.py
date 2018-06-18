@@ -1,5 +1,5 @@
-def is_pair(s):
-    # ÇÔ¼ö¸¦ ¿Ï¼ºÇÏ¼¼¿ä
+def solution(s):
+    # í•¨ìˆ˜ë¥¼ ì™„ì„±í•˜ì„¸ìš”
     cnt=0
     for i in list(s):
         if i=='(':
@@ -11,8 +11,3 @@ def is_pair(s):
     if cnt!=0:
         return False
     return True
-
-
-# ¾Æ·¡´Â Å×½ºÆ®·Î Ãâ·ÂÇØ º¸±â À§ÇÑ ÄÚµåÀÔ´Ï´Ù.
-print( is_pair("(hello)()"))
-print( is_pair(")("))
