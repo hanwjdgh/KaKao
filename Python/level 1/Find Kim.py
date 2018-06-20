@@ -1,9 +1,3 @@
-def findKim(seoul):
+def solution(seoul):
     kimIdx = seoul.index("Kim")
-    # ÇÔ¼ö¸¦ ¿Ï¼ºÇÏ¼¼¿ä
-	
-    return "±è¼­¹æÀº {}¿¡ ÀÖ´Ù".format(kimIdx)
-
-
-# ½ÇÇàÀ» À§ÇÑ Å×½ºÆ®ÄÚµåÀÔ´Ï´Ù.
-print(findKim(["Queen", "Tod", "Kim"]))
+    return "ê¹€ì„œë°©ì€ {}ì— ìˆë‹¤".format(kimIdx)
