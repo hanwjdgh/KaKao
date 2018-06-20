@@ -1,7 +1,6 @@
-def water_melon(n):
-    # ÇÔ¼ö¸¦ ¿Ï¼ºÇÏ¼¼¿ä.
-    arr = "¼ö"
-    arr2 = "¹Ú"
+def solution(n):
+    arr = "ìˆ˜"
+    arr2 = "ë°•"
     answer = ""
     for a in range(0,n):
         if a%2 ==0:
@@ -9,8 +8,3 @@ def water_melon(n):
         else:
             answer += arr2
     return answer
-
-
-# ½ÇÇàÀ» À§ÇÑ Å×½ºÆ®ÄÚµåÀÔ´Ï´Ù.
-print("nÀÌ 3ÀÎ °æ¿ì: " + water_melon(3));
-print("nÀÌ 4ÀÎ °æ¿ì: " + water_melon(4));
