@@ -1,4 +1,4 @@
-def collatz(num):
+def solution(num):
     answer = 0
     while num > 1:
         if num %2 ==0:
@@ -10,6 +10,3 @@ def collatz(num):
             answer=-1
             break
     return answer
-
-# 아래는 테스트로 출력해 보기 위한 코드입니다.
-print(collatz(6))
