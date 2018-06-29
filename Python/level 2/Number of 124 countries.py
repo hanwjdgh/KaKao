@@ -1,4 +1,4 @@
-def change124(n):
+def solution(n):
     answer = ""
     while n>0:
         n,a = divmod(n,3)
@@ -6,7 +6,3 @@ def change124(n):
             n-=1
         answer = "412"[a]+answer
     return answer
-
-
-# 아래는 테스트로 출력해 보기 위한 코드입니다.
-print(change124(10))
