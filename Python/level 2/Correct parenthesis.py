@@ -1,5 +1,4 @@
 def solution(s):
-    # 함수를 완성하세요
     cnt=0
     for i in list(s):
         if i=='(':
