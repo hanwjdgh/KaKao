@@ -16,17 +16,18 @@ def LRU(c_size,list):
         if c_size == 0:
             hap += 5
         else:
-            if c_size > len(c_list):
-                if vars not in c_list:
+            if vars in c_list:
+                c_list.pop(c_list.index(vars))
+                c_list.append(vars)
+                hap += 1
+            else:
+                if c_size > len(c_list):
                     c_list.append(vars)
                     hap += 5
-            elif vars in c_list:
-                    hap += 1
-            else:
-                c_list[cnt] = vars
-                hap += 5
-                cnt += 1
-
+                else:
+                    c_list.pop(0)
+                    c_list.append(vars)
+                    hap+=5
         if cnt == c_size:
             cnt = 0
     return hap  
