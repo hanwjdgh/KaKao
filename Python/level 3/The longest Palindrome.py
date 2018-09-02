@@ -1,11 +1,14 @@
 def solution(s):
-    result = []
-    for i in range(0,len(s)):
-        for j in range(1,len(s)+1):
-            if str(s[i:j])==str(s[i:j])[::-1]:
-                result.append(len(s[i:j]))
-            if str(s[j:i])==str(s[j:i])[::-1]:
-                result.append(len(s[j:i]))
-    return max(result)
+    T = '#'.join('^{}$'.format(s))
+    n = len(T)
+    P = [0] * n
+    C = R = 0
+    for i in range (1, n-1):
+        P[i] = (R > i) and min(R - i, P[2*C - i]) 
+        while T[i + 1 + P[i]] == T[i - 1 - P[i]]:
+            P[i] += 1
+        if i + P[i] > R:
+            C, R = i, i + P[i]
 
-#69.3
+    maxLen, centerIndex = max((n, i) for i, n in enumerate(P))
+    return len(s[(centerIndex  - maxLen)//2: (centerIndex  + maxLen)//2])
