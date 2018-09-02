@@ -1,4 +1,4 @@
-def tiling(n):
+def solution(n):
     answer = 0
     var = 1
     sum = 0
@@ -10,9 +10,5 @@ def tiling(n):
             tmp = var
             var = var * 3 + sum * 2
             sum += tmp
-        answer = var % 100000
+        answer = var % 1000000007
     return answer
-
-
-# 아래는 테스트로 출력해 보기 위한 코드입니다.
-print(tiling(6))
