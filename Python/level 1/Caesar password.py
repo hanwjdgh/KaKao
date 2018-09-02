@@ -1,6 +1,5 @@
 import string
-
-def caesar(s, n):
+def solution(s, n):
     lower = list(string.ascii_lowercase)
     upper = list(string.ascii_uppercase)
     s = list(s)
@@ -14,6 +13,3 @@ def caesar(s, n):
         else:
             continue
     return ''.join(s)
-
-# 실행을 위한 테스트코드입니다.
-print('s는 "a B z", n은 4인 경우: ' + caesar("a B z", 4))
