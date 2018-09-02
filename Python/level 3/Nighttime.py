@@ -1,17 +1,17 @@
 def solution(n, works):
-    if n >= sum(works):
-        return 0
+    answer = 0
     works = sorted(works)
-    print(works)
-    for i in range(0,n):
-        for j in range(len(works)-1,-1,-1):
-            print(works[j],works[j-1])
-            if works[j] > works[j-1]:
+    leng = len(works)
+    
+    while n > 0:
+        max_v = max(works)
+        for i in range(leng-1 , -1, -1):
+            if works[i] == max_v:
+                if works[i] > 0:
+                    works[i] -= 1
+                n-=1
+            if n==0:
                 break
-        print(j)
-        works[j] -= 1
-
-        print(works)
-    return sum([i*i for i in works])
-
-solution(4,[4,3,3])
+    for i in range(leng):
+        answer += works[i] * works[i]
+    return answer
